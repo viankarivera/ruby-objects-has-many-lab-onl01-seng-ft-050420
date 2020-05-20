@@ -15,7 +15,7 @@ class Author
   end
 
   def posts
-    Post.collect {|post| post.author}
+    Post.all.collect {|post| post.author}
   end
 
   def add_post(post, author)
