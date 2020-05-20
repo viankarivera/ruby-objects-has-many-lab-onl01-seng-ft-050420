@@ -14,8 +14,8 @@ class Author
     @@all
   end
 
-  def posts(author, post)
-    Post.new(self, post)
+  def posts
+    Post.collect {|post| post.author}
   end 
 
   def add_post(post, author)
