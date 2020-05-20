@@ -10,6 +10,10 @@ class Author
     @@all << self
   end
 
+  def self.all 
+    @@all 
+  end 
+
   def add_post(post)
     @posts << post
     post.author = self
