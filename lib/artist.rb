@@ -8,6 +8,10 @@ class Artist
     @name = name
   end
 
+  def songs
+    songs.collect {|song| songs.artist == self}
+  end
+
   def add_song(song)
     Song.new(song)
     song.artist = self
