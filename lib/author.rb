@@ -2,24 +2,16 @@ class Author
 
   attr_accessor :name, :posts
 
-  @@all = []
   @@post_count = 0
-
+  
   def initialize(name)
     @name = name
-    @@all << self
+    @posts = []
   end
 
-  def self.all
-    @@all
-  end
-
-  def posts
-    Post.all.collect {|post| post.artist == self}
-  end
-
-  def add_post(post, author)
-    Post.new(post, self)
+  def add_post(post)
+    @posts << post
+    post.author = self
     @@post_count += 1
   end
 
