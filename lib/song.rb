@@ -24,9 +24,11 @@ class Song
     @@all << self
     #self?
   end
-  def artist_name=(name)
-    artist = Artist.find_or_create_by_name(name)
-    self.artist = artist
-    artist.add_song(self)
+  def artist_name
+    if @author == nil
+      return nil
+    else
+      @author.name
+    end
   end
 end
