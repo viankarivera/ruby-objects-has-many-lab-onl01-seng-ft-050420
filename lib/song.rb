@@ -20,7 +20,7 @@ class Song
   def song
     Song.all.select{|song| song.artist == self}
   end
-  
+
   def artist_name
     if @artist == nil
       return nil
