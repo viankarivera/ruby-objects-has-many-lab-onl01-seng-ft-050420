@@ -20,15 +20,12 @@ class Song
   def song
     Song.all.select{|song| song.artist == self}
   end
-  def save
-    @@all << self
-    #self?
-  end
+  
   def artist_name
     if @artist == nil
       return nil
     else
-      @author.name
+      @artist.name
     end
   end
 end
