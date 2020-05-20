@@ -16,6 +16,7 @@ class Author
 
   def posts(author, post)
     Post.new(self, post)
+  end 
 
   def add_post(post, author)
     Post.new(post, self)
