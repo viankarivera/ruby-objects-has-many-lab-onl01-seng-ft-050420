@@ -1,4 +1,4 @@
-require "pry" 
+require "pry"
 class Artist
 
   attr_accessor :name
@@ -13,7 +13,7 @@ class Artist
 
   def self.all
     @@all
-  end 
+  end
 
   def songs
     Song.all.select {|song| song.artist == self}
