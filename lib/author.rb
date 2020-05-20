@@ -14,6 +14,9 @@ class Author
     @@all
   end
 
+  def posts(author, post)
+    Post.new(self, post)
+
   def add_post(post, author)
     Post.new(post, self)
     @@post_count += 1
